@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Senha</title>
+    <script type="text/javascript" src="./JavaScript/hash.js"></script>
+    <link rel="stylesheet" href="style/senha.css">
+</head>
+<body>
+
+    <script type="text/javascript" src="./script/md5.js"></script>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Insira a Senha</h2>
+
+        <form id="senhaForm">
+            <label for="senhaInput">SENHA:</label>
+            <input type="password" id="senha" name="senha">
+            <button type="button" onclick="verificarSenha()">Verificar Senha</button>
+        </form>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function verificarSenha() {
+            var senhaDigitada = document.getElementById("senha").value;
+            var senhaMD5 = hex_md5(senhaDigitada);
+
+            // Corrija o valor da senha MD5 para a senha "SENHA"
+            var senhaCorretaMD5 = "85ee0fe4f155a9af2657d85054ad63ca"; 
+
+            if (senhaMD5 === senhaCorretaMD5) {
+                // Senha correta, redirecionar para outra página
+                window.location.href = "atletas.html";
+            } else {
+                // Senha incorreta, exibir mensagem
+                document.getElementById("resultado").innerText = "Senha incorreta!";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('../background/botafogo2.jpg');
+    background-size: 100% 100%; /* Ajuste para cobrir 100% da largura e altura */
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+#container {
+    text-align: center;
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+#senhaForm {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#senha {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid white;
+    color: #000; /* cor do texto dentro do input */
+    background-color: gray;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000; /* cor do texto do botão */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s; /* suaviza a transição de cores */
+}
+
+button:hover {
+    background-color: #4CAF50; /* cor do botão ao passar o mouse */
+    color: #fff; /* cor do texto do botão ao passar o mouse */
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    #senhaForm {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #senhaInput {
+        width: 100%;
+    }
+}

@@ -1,0 +1,99 @@
+body  {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+
+}
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+button, select {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#playerDetais {
+    display: flex;
+    justify-items: center;
+}
+.player-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.player-card {
+    width: calc(25% - 20px);
+    height: 400px;
+    max-height: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(255, 204, 0) ;
+    text-align: center;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Adicionando regras de mídia para responsividade */
+@media screen and (max-width: 768px) {
+    .player-card {
+        width: calc(100% - 20px);
+    }
+
+    .button-container {
+        flex-direction: column; /* Altera a direção dos botões para coluna */
+    }
+
+    select {
+        width: 80%;
+        margin: 10px auto;
+        display: inline-block; /* Exibe o select para telas menores que 768px */
+    }
+
+    button {
+        display: none; /* Oculta os botões para telas menores que 768px */
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .player-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .player-card {
+        width: calc(25% - 20px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .player-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+h2 {
+
+    color: rgb(255, 204, 0);
+}
